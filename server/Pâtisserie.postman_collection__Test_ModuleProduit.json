@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "a97005d7-9b4d-46dc-b777-e7742df7564a",
+		"name": "Pâtisserie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Module_Produits",
+			"item": [
+				{
+					"name": "http://localhost:3000/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"a new product\",\r\n    \"description\" : \"this is my description\",\r\n    \"price\" : 10,\r\n    \"_category\" : \"60e6dc50227118ac18e0ec49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						},
+						"description": "Adding a new product "
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/60ec0f213435792230a42d79",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"a new product\",\r\n    \"description\" : \"my new product new description __update_test__\",\r\n    \"price\" : 20,\r\n    \"_category\" : \"60e6dc50227118ac18e0ec49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/60ec0f213435792230a42d79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"60ec0f213435792230a42d79"
+							]
+						},
+						"description": "Update the new product __update_test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/60ec0f213435792230a42d79",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"a new product\",\r\n    \"description\" : \"my new product new description __update_test__\",\r\n    \"price\" : 20,\r\n    \"_category\" : \"60e6dc50227118ac18e0ec49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						},
+						"description": "Deleting the new Product __Delete_test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"a new product\",\r\n    \"description\" : \"my new product new description __update_test__\",\r\n    \"price\" : 20,\r\n    \"_category\" : \"60e6dc50227118ac18e0ec49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/60e6d2a17a28e642e0ff41a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"60e6d2a17a28e642e0ff41a8"
+							]
+						},
+						"description": "Get All the products __fetch_test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/60e6d2a17a28e642e0ff41a8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"a new product\",\r\n    \"description\" : \"my new product new description __update_test__\",\r\n    \"price\" : 20,\r\n    \"_category\" : \"60e6dc50227118ac18e0ec49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/60e6d2a17a28e642e0ff41a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"60e6d2a17a28e642e0ff41a8"
+							]
+						},
+						"description": "Get a product by id __Get_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"my new category\",\r\n    \"description\" : \"this is my description\",\r\n    \"products\" : [\"60e6d9b25a88c01f48871806\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						},
+						"description": "Adding a category __Add_test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/categories/60ec102c3435792230a42d82",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"my new category\",\r\n    \"description\" : \"Updating my category\",\r\n    \"products\" : [\"60e6d9b25a88c01f48871806\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/60ec102c3435792230a42d82",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"60ec102c3435792230a42d82"
+							]
+						},
+						"description": "Updating the new category __Update_test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/categories/60ec102c3435792230a42d82",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"my new category\",\r\n    \"description\" : \"Updating my category\",\r\n    \"products\" : [\"60e6d9b25a88c01f48871806\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/60ec102c3435792230a42d82",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"60ec102c3435792230a42d82"
+							]
+						},
+						"description": "Deleting the new category __Delete_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"my new category\",\r\n    \"description\" : \"Updating my category\",\r\n    \"products\" : [\"60e6d9b25a88c01f48871806\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						},
+						"description": "Get all cateogries __Fetch_test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/categories/60e6dc50227118ac18e0ec49",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"my new category\",\r\n    \"description\" : \"Updating my category\",\r\n    \"products\" : [\"60e6d9b25a88c01f48871806\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/60e6dc50227118ac18e0ec49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"60e6dc50227118ac18e0ec49"
+							]
+						},
+						"description": "Get a cateogry by id __fetchById_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/60ec110d3435792230a42d89",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"a new product\",\r\n    \"description\" : \"my new product new description __update_test__\",\r\n    \"price\" : 20,\r\n    \"_category\" : \"60e6dc50227118ac18e0ec49\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/60ec110d3435792230a42d89",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"60ec110d3435792230a42d89"
+							]
+						},
+						"description": "Update a product __Update_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/categories/60e6dc50227118ac18e0ec49",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"my new category\",\r\n    \"description\" : \"Updating my category\",\r\n    \"products\" : [\"60e6d9b25a88c01f48871806\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/60e6dc50227118ac18e0ec49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"60e6dc50227118ac18e0ec49"
+							]
+						},
+						"description": "Update my category __Update_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/offers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new offer\",\r\n    \"description\" : \"this is my new offer\",\r\n    \"price\" : 12,\r\n    \"products\" : [\"60e6dcdca655c230a4ab59ba\"],\r\n    \"state\" : \"invisible\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/offers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"offers"
+							]
+						},
+						"description": "Adding new offer __Add_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/offers/60ec11a53435792230a42d93",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new offer\",\r\n    \"description\" : \"this is my new offer\",\r\n    \"price\" : 12,\r\n    \"products\" : [\"60e6dcdca655c230a4ab59ba\"],\r\n    \"state\" : \"invisible\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/offers/60ec11a53435792230a42d93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"offers",
+								"60ec11a53435792230a42d93"
+							]
+						},
+						"description": "Delete an offer __Delete_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/offers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new offer\",\r\n    \"description\" : \"this is my new offer\",\r\n    \"price\" : 12,\r\n    \"products\" : [\"60e6dcdca655c230a4ab59ba\"],\r\n    \"state\" : \"invisible\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/offers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"offers"
+							]
+						},
+						"description": "Fetch Offers __Fetch_Test__ "
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/offers/60e6e63a845986a048d7feb6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new offer\",\r\n    \"description\" : \"this is my new offer\",\r\n    \"price\" : 12,\r\n    \"products\" : [\"60e6dcdca655c230a4ab59ba\"],\r\n    \"state\" : \"invisible\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/offers/60e6e63a845986a048d7feb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"offers",
+								"60e6e63a845986a048d7feb6"
+							]
+						},
+						"description": "get one offer by Id __FetchById_Test__"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/offers/60e6e63a845986a048d7feb6",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new offer\",\r\n    \"description\" : \"update my new offer\",\r\n    \"price\" : 12,\r\n    \"products\" : [\"60e6dcdca655c230a4ab59ba\"],\r\n    \"state\" : \"visible\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/offers/60e6e63a845986a048d7feb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"offers",
+								"60e6e63a845986a048d7feb6"
+							]
+						},
+						"description": "Update my offer __Update_Test__"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

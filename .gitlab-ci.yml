@@ -1,0 +1,10 @@
+deploy:
+  image: alpine
+  before_script:
+    - apk add openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$ssh_key" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - ssh -o StrictHostKeyChecking=no  ubuntu@ec2-3-225-129-33.compute-1.amazonaws.com "sudo apt-get update && apt-get upgrade;sudo apt-get install -y docker.io ;sudo systemctl enable --now docker;cd /home/ubuntu/mern/PastrySiteDemo;git pull origin main;sudo docker-compose up --force-recreate --build -d;sudo docker image prune -f"
